@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { ContactForm } from "@/components/contact-form";
+import { ExperienceTimeline } from "@/components/experience-timeline";
 import { MobileNav } from "@/components/mobile-nav";
 import { ProjectCard } from "@/components/project-card";
 import { SkillsSection } from "@/components/skills-section";
@@ -73,17 +74,15 @@ export default function Home() {
           <div className="space-y-7">
             <div className="space-y-5">
               <h1 className="text-balance text-4xl font-black tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                Build agentic AI systems that feel{" "}
+                {/* Build agentic AI systems that feel{" "}
                 <span className="relative">
                   inevitable
                   <span className="absolute -inset-x-1 -bottom-2 h-3 rounded-full bg-gold/35" />
-                </span>
-                .
+                </span> */}
+                Builder. Engineer. Problem Solver.
               </h1>
               <p className="max-w-2xl text-pretty text-lg leading-8 text-muted md:text-xl">
-                Software engineer focused on agentic AI and product reliability. I
-                ship web apps and data-driven features with Next.js, Python, SQL,
-                and LangChain/LangGraph—measured by real user impact.
+                I'm a Student and an aspiring Software Engineer based in the Bay Area.
               </p>
             </div>
 
@@ -123,6 +122,7 @@ export default function Home() {
                   alt="Mitul Marimuthu"
                   fill
                   priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
                   className="object-cover"
                 />
               </div>
@@ -153,12 +153,12 @@ export default function Home() {
         <section id="about" className="scroll-mt-28 space-y-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="space-y-3">
-              <p className="text-xs font-black uppercase tracking-[0.28em] text-gold">
+              <p className="text-2xl font-black uppercase tracking-[0.28em] text-gold">
                 About
               </p>
-              <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
+              {/* <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
                 Builder. Engineer. Problem Solver.
-              </h2>
+              </h2> */}
             </div>
             <p className="max-w-xl text-sm leading-7 text-muted md:text-base">
               UCSB Computer Science student shipping real impact across AI, web, and systems.
@@ -223,12 +223,12 @@ export default function Home() {
         {/* ── Projects ── */}
         <section id="projects" className="scroll-mt-28 space-y-8">
           <div className="space-y-3">
-            <p className="text-xs font-black uppercase tracking-[0.28em] text-gold">
+            <p className="text-2xl font-black uppercase tracking-[0.28em] text-gold">
               Projects
             </p>
-            <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
+            {/* <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
               Projects with real tradeoffs
-            </h2>
+            </h2> */}
           </div>
 
           <div className="grid gap-6 lg:grid-cols-2">
@@ -266,102 +266,15 @@ export default function Home() {
         {/* ── Experience ── */}
         <section id="experience" className="scroll-mt-28 space-y-8">
           <div className="space-y-3">
-            <p className="text-xs font-black uppercase tracking-[0.28em] text-gold">
+            <p className="text-2xl font-black uppercase tracking-[0.28em] text-gold">
               Experience
             </p>
-            <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
+            {/* <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
               A timeline you can defend in interviews.
-            </h2>
+            </h2> */}
           </div>
 
-          <div className="grid gap-5">
-            {[
-              {
-                title: "Technical Consultant · Polymarket",
-                meta: "Fill in dates · Fill in location",
-                logoSrc: "/images/experience-logo-placeholder.svg",
-                logoAlt: "Polymarket",
-                bullets: [
-                  "Conducted 100+ user interviews and analyzed product usage data to idenitify key 5 friction points, leading to a 25% increase in user retention.",
-                  "Prototyped and shipped lines and odds for 3 new markets, resulting in a 20% increase in daily active users.",
-                ],
-              },
-              {
-                title: "Software Engineering Intern · Yope",
-                meta: "Dec 2025 — March 2026 · Remote",
-                logoSrc: "/images/experience-logo-placeholder.svg",
-                logoAlt: "Yope",
-                bullets: [
-                  "Ideated, prototyped, and delivered 3 core app features, driving a 30% increase in US download rates.",
-                  "Owned milestone planning across a 5-person engineering team; compiled technical documentation and wrote OKRs, improving sprint velocity by 15%.",
-                  "Presented insights from 100+ user interviews, identifying and resolving 4 critical friction points, resulting in a $15k increase in monthly recurring revenue.",
-                ],
-              },
-              {
-                title: "Software Engineering Intern · smartQED",
-                meta: "Jun 2025 — Sept 2025 · Remote",
-                logoSrc: "/images/experience-logo-placeholder.svg",
-                logoAlt: "smartQED",
-                bullets: [
-                  "Automated client onboarding and 2 core services via an AI agent, cutting average service time by 30%.",
-                  "Implemented Retrieval-Augmented Generation (RAG) to search through 200+ client cases, reducing servicing costs for 30 new clients by 40%.",
-                  "Researched 10 agentic AI architectures, implemented proof-of-concepts with 95% accuracy, and compiled results into a detailed 20-page design document.",
-                ],
-              },
-              {
-                title: "Technical Director · ACM (UCSB)",
-                meta: "Jan 2025 — Present · Santa Barbara, CA",
-                logoSrc: "/images/experience-logo-placeholder.svg",
-                logoAlt: "ACM UCSB",
-                bullets: [
-                  "Organized PokerBots, a school-wide poker AI agent competition with 250 participants and 7 industry guest speakers.",
-                  "Developed a Next.js + Supabase realtime interface for contestants, supporting 80+ bots and 300+ spectators over 4 hours.",
-                  "Led sponsorship outreach by automating cold email campaigns with Python, reaching 120+ companies and securing 3 partnerships (+$9k funding).",
-                ],
-              },
-              {
-                title: "Software Engineering Director · AgentsSB",
-                meta: "Sept 2025 — Present · Santa Barbara, CA",
-                logoSrc: "/images/experience-logo-placeholder.svg",
-                logoAlt: "AgentsSB",
-                bullets: [
-                  "Directed a 6-person team to develop 4 AI-powered dashboards, leveraging agentic development environments to accelerate the product lifecycle by 50%.",
-                  "Established a curriculum centralized on Claude Code and Codex subagents, enabling 60+ members to start deploying industry-level code.",
-                ],
-              },
-            ].map((job) => (
-              <div key={job.title} className="section-card rounded-3xl p-7 md:p-8">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                  <div className="min-w-0 flex-1 pr-0 sm:pr-4">
-                    <h3 className="text-xl font-black tracking-tight text-foreground">
-                      {job.title}
-                    </h3>
-                    <p className="mt-2 text-sm font-semibold text-muted">
-                      {job.meta}
-                    </p>
-                  </div>
-                  {/* Logo slot — drop the real logo in public/images/logos/ and update logoSrc */}
-                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-foreground/10 bg-background/50 sm:ml-auto">
-                    <Image
-                      src={job.logoSrc}
-                      alt={job.logoAlt}
-                      fill
-                      sizes="64px"
-                      className="object-contain p-2"
-                    />
-                  </div>
-                </div>
-                <ul className="mt-6 space-y-3 text-sm leading-7 text-muted md:text-base">
-                  {job.bullets.map((b) => (
-                    <li key={b} className="flex gap-3">
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-gold" />
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <ExperienceTimeline />
         </section>
 
         {/* ── Contact ── */}

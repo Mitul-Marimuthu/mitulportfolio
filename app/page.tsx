@@ -9,8 +9,8 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 const nav = [
   { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -82,7 +82,7 @@ export default function Home() {
                 Builder. Engineer. Problem Solver.
               </h1>
               <p className="max-w-2xl text-pretty text-lg leading-8 text-muted md:text-xl">
-                I'm a Student and an aspiring Software Engineer based in the Bay Area.
+                Hi! My name is Mitul and I'm a Student and an aspiring Software Engineer based in the Bay Area.
               </p>
             </div>
 
@@ -220,15 +220,23 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── Experience ── */}
+        <section id="experience" className="scroll-mt-28 space-y-8">
+          <div className="space-y-3">
+            <p className="text-2xl font-black uppercase tracking-[0.28em] text-gold">
+              Experience
+            </p>
+          </div>
+
+          <ExperienceTimeline />
+        </section>
+
         {/* ── Projects ── */}
         <section id="projects" className="scroll-mt-28 space-y-8">
           <div className="space-y-3">
             <p className="text-2xl font-black uppercase tracking-[0.28em] text-gold">
               Projects
             </p>
-            {/* <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
-              Projects with real tradeoffs
-            </h2> */}
           </div>
 
           <div className="grid gap-6 lg:grid-cols-2">
@@ -261,20 +269,6 @@ export default function Home() {
               imageAlt="Nuzzy screenshot"
             />
           </div>
-        </section>
-
-        {/* ── Experience ── */}
-        <section id="experience" className="scroll-mt-28 space-y-8">
-          <div className="space-y-3">
-            <p className="text-2xl font-black uppercase tracking-[0.28em] text-gold">
-              Experience
-            </p>
-            {/* <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
-              A timeline you can defend in interviews.
-            </h2> */}
-          </div>
-
-          <ExperienceTimeline />
         </section>
 
         {/* ── Contact ── */}

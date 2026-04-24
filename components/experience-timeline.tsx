@@ -7,15 +7,17 @@ type Job = {
   logoSrc: string;
   logoAlt: string;
   bullets: string[];
+  group: "work" | "leadership";
 };
 
 const experiences: Job[] = [
   {
-    role: "Technical Consultant",
+    role: "Technical Consultant (via Ascend Consulting Group)",
     company: "Polymarket",
-    meta: "Fill in dates · Fill in location",
+    meta: "March 2026 - Prsent · UCSB",
     logoSrc: "/images/experience-logo-placeholder.svg",
     logoAlt: "Polymarket",
+    group: "work",
     bullets: [
       "Conducted 100+ user interviews and analyzed product usage data to identify 5 key friction points, leading to a 25% increase in user retention.",
       "Prototyped and shipped lines and odds for 3 new markets, resulting in a 20% increase in daily active users.",
@@ -23,10 +25,11 @@ const experiences: Job[] = [
   },
   {
     role: "Software Engineering Intern",
-    company: "Yope",
+    company: "Yope (startup)",
     meta: "Dec 2025 — Mar 2026 · Remote",
     logoSrc: "/images/experience-logo-placeholder.svg",
     logoAlt: "Yope",
+    group: "work",
     bullets: [
       "Ideated, prototyped, and delivered 3 core app features, driving a 30% increase in US download rates.",
       "Owned milestone planning across a 5-person engineering team; compiled technical documentation and wrote OKRs, improving sprint velocity by 15%.",
@@ -35,10 +38,11 @@ const experiences: Job[] = [
   },
   {
     role: "Software Engineering Intern",
-    company: "smartQED",
+    company: "smartQED (startup)",
     meta: "Jun 2025 — Sept 2025 · Remote",
     logoSrc: "/images/experience-logo-placeholder.svg",
     logoAlt: "smartQED",
+    group: "work",
     bullets: [
       "Automated client onboarding and 2 core services via an AI agent, cutting average service time by 30%.",
       "Implemented Retrieval-Augmented Generation (RAG) to search through 200+ client cases, reducing servicing costs for 30 new clients by 40%.",
@@ -51,6 +55,7 @@ const experiences: Job[] = [
     meta: "Jan 2025 — Present · Santa Barbara, CA",
     logoSrc: "/images/experience-logo-placeholder.svg",
     logoAlt: "ACM UCSB",
+    group: "leadership",
     bullets: [
       "Organized PokerBots, a school-wide poker AI agent competition with 250 participants and 7 industry guest speakers.",
       "Developed a Next.js + Supabase realtime interface for contestants, supporting 80+ bots and 300+ spectators over 4 hours.",
@@ -59,16 +64,52 @@ const experiences: Job[] = [
   },
   {
     role: "Software Engineering Director",
-    company: "AgentsSB",
+    company: "AgentsSB (UCSB)",
     meta: "Sept 2025 — Present · Santa Barbara, CA",
     logoSrc: "/images/experience-logo-placeholder.svg",
     logoAlt: "AgentsSB",
+    group: "leadership",
     bullets: [
       "Directed a 6-person team to develop 4 AI-powered dashboards, leveraging agentic development environments to accelerate the product lifecycle by 50%.",
       "Established a curriculum centralized on Claude Code and Codex subagents, enabling 60+ members to start deploying industry-level code.",
     ],
   },
 ];
+
+function GroupDivider({ label }: { label: string }) {
+  return (
+    <div className="relative flex items-center py-2">
+      {/* Mobile */}
+      <div className="flex items-center gap-3 md:hidden">
+        <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-gold/50 bg-gold/10">
+          <span className="text-[0.6rem] font-black uppercase tracking-wider text-gold">
+            {label[0]}
+          </span>
+        </div>
+        <span className="text-xs font-black uppercase tracking-[0.22em] text-gold">
+          {label}
+        </span>
+      </div>
+      {/* Desktop */}
+      <div className="hidden w-full md:grid md:grid-cols-[1fr_auto_1fr]">
+        <div className="flex items-center justify-end pr-6">
+          <div className="h-px flex-1 bg-gold/20" />
+        </div>
+        <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-gold/50 bg-gold/10">
+          <span className="text-[0.6rem] font-black uppercase tracking-wider text-gold">
+            {label[0]}
+          </span>
+        </div>
+        <div className="flex items-center pl-6">
+          <span className="text-xs font-black uppercase tracking-[0.22em] text-gold">
+            {label}
+          </span>
+          <div className="ml-4 h-px flex-1 bg-gold/20" />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function JobCard({ job, side }: { job: Job; side: "left" | "right" }) {
   return (
@@ -100,71 +141,85 @@ function JobCard({ job, side }: { job: Job; side: "left" | "right" }) {
 }
 
 export function ExperienceTimeline() {
+  const experienceJobs = experiences.filter((j) => j.group === "work");
+  const leadershipJobs = experiences.filter((j) => j.group === "leadership");
+
+  const sections: Array<{ label: string; jobs: Job[] }> = [
+    { label: "Work", jobs: experienceJobs },
+    { label: "Leadership", jobs: leadershipJobs },
+  ];
+
   return (
     <div className="relative">
       {/* Vertical line — left-aligned on mobile, centered on desktop */}
       <div className="absolute bottom-0 left-5 top-0 w-px bg-foreground/15 md:left-1/2 md:-translate-x-px" />
 
       <div className="space-y-8 md:space-y-14">
-        {experiences.map((job, i) => {
-          const isLeft = i % 2 === 0;
-
+        {sections.map(({ label, jobs }) => {
+          // Index resets per section so alternating stays consistent within each group
           return (
-            <div key={`${job.role}-${job.company}`} className="relative">
+            <div key={label} className="space-y-8 md:space-y-14">
+              <GroupDivider label={label} />
 
-              {/* ── Mobile: line left, all cards right ── */}
-              <div className="flex items-start gap-5 md:hidden">
-                <div className="relative z-10 mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-foreground/20 bg-surface shadow-md">
-                  <Image
-                    src={job.logoSrc}
-                    alt={job.logoAlt}
-                    fill
-                    sizes="40px"
-                    className="rounded-full object-contain p-1.5"
-                  />
-                </div>
-                <div className="flex-1">
-                  <p className="mb-2 text-xs font-semibold text-muted">{job.meta}</p>
-                  <JobCard job={job} side="right" />
-                </div>
-              </div>
+              {jobs.map((job, i) => {
+                const isLeft = i % 2 === 0;
 
-              {/* ── Desktop: alternating left/right ── */}
-              <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] md:items-start">
-                {/* Left column */}
-                <div className="pr-10">
-                  {isLeft ? (
-                    <JobCard job={job} side="left" />
-                  ) : (
-                    <p className="pt-7 text-right text-sm font-semibold text-muted">
-                      {job.meta}
-                    </p>
-                  )}
-                </div>
+                return (
+                  <div key={`${job.role}-${job.company}`} className="relative">
 
-                {/* Center node */}
-                <div className="relative z-10 mx-auto mt-5 flex h-14 w-14 items-center justify-center rounded-full border-2 border-foreground/20 bg-surface shadow-lg">
-                  <Image
-                    src={job.logoSrc}
-                    alt={job.logoAlt}
-                    fill
-                    sizes="56px"
-                    className="rounded-full object-contain p-2"
-                  />
-                </div>
+                    {/* ── Mobile ── */}
+                    <div className="flex items-start gap-5 md:hidden">
+                      <div className="relative z-10 mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-foreground/20 bg-surface shadow-md">
+                        <Image
+                          src={job.logoSrc}
+                          alt={job.logoAlt}
+                          fill
+                          sizes="40px"
+                          className="rounded-full object-contain p-1.5"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <p className="mb-2 text-xs font-semibold text-muted">{job.meta}</p>
+                        <JobCard job={job} side="right" />
+                      </div>
+                    </div>
 
-                {/* Right column */}
-                <div className="pl-10">
-                  {!isLeft ? (
-                    <JobCard job={job} side="right" />
-                  ) : (
-                    <p className="pt-7 text-sm font-semibold text-muted">
-                      {job.meta}
-                    </p>
-                  )}
-                </div>
-              </div>
+                    {/* ── Desktop ── */}
+                    <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] md:items-start">
+                      <div className="pr-10">
+                        {isLeft ? (
+                          <JobCard job={job} side="left" />
+                        ) : (
+                          <p className="pt-7 text-right text-sm font-semibold text-muted">
+                            {job.meta}
+                          </p>
+                        )}
+                      </div>
 
+                      <div className="relative z-10 mx-auto mt-5 flex h-14 w-14 items-center justify-center rounded-full border-2 border-foreground/20 bg-surface shadow-lg">
+                        <Image
+                          src={job.logoSrc}
+                          alt={job.logoAlt}
+                          fill
+                          sizes="56px"
+                          className="rounded-full object-contain p-2"
+                        />
+                      </div>
+
+                      <div className="pl-10">
+                        {!isLeft ? (
+                          <JobCard job={job} side="right" />
+                        ) : (
+                          <p className="pt-7 text-sm font-semibold text-muted">
+                            {job.meta}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+
+                  </div>
+                );
+              })}
             </div>
           );
         })}

@@ -5,7 +5,7 @@ import { MobileNav } from "@/components/mobile-nav";
 import { ProjectCard } from "@/components/project-card";
 import { SkillsSection } from "@/components/skills-section";
 import { ThemeToggle } from "@/components/theme-toggle";
-// aa
+
 const nav = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },

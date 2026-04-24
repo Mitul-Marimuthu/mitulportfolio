@@ -57,6 +57,8 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <a
               href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
               className="hidden rounded-full bg-gold px-4 py-2 text-sm font-black text-on-gold shadow-[0_16px_40px_rgba(255,184,28,0.25)] transition hover:brightness-110 sm:inline-flex"
             >
               Resume
@@ -346,6 +348,8 @@ export default function Home() {
               </a>
               <a
                 href="/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
                 className="text-sm font-semibold text-muted transition hover:text-foreground"
               >
                 Resume

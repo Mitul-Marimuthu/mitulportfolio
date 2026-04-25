@@ -1,5 +1,13 @@
 import Image from "next/image";
 
+const pythonAliases = new Set(["flask", "scikit-learn", "langchain", "langgraph"]);
+
+function techLogoSrc(name: string) {
+  const key = name.toLowerCase();
+  if (pythonAliases.has(key)) return "/images/logos/skills/python.png";
+  return `/images/logos/skills/${key.replace(/[^a-z0-9]/g, "")}.png`;
+}
+
 export function ProjectCard({
   title,
   description,
@@ -43,9 +51,14 @@ export function ProjectCard({
               key={t}
               className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-background/60 px-2.5 py-1 text-[0.7rem] font-semibold text-foreground/70 transition hover:border-gold/30 hover:bg-gold/5 hover:text-foreground"
             >
-              {/* Logo slot — swap this span with <Image src={logoSrc} /> once you have the asset */}
-              <span className="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-foreground/10 text-[0.5rem] font-black leading-none text-foreground/40">
-                {t[0]}
+              <span className="relative inline-flex h-3.5 w-3.5 shrink-0 overflow-hidden rounded-full bg-foreground/10">
+                <Image
+                  src={techLogoSrc(t)}
+                  alt={t}
+                  fill
+                  sizes="14px"
+                  className="object-contain p-[1px]"
+                />
               </span>
               {t}
             </span>

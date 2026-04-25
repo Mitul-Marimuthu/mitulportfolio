@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112" role="img" aria-label="Company logo placeholder">
+  <rect x="1" y="1" width="110" height="110" rx="16" fill="#e8eef8" stroke="#003660" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="50%" y="46%" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="11" font-weight="800" fill="#003660" opacity="0.85">
+    LOGO
+  </text>
+  <text x="50%" y="62%" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="8" font-weight="600" fill="#003660" opacity="0.65">
+    public/images/logos/
+  </text>
+</svg>

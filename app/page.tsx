@@ -246,14 +246,14 @@ export default function Home() {
               title="NFLNews"
               description="Built a news aggregator web app for NFL fans using Python, HTML, and Flask. Implemented a chatbot to act as a personalized team analyst, delivering real-time insights and updates."
               tech={["Python", "Flask", "HTML", "CSS", "Gemini 2.0"]}
-              imageSrc="/images/project-placeholder.svg"
+              imageSrc="/images/nflnews.JPEG"
               imageAlt="NFLNews screenshot"
             />
             <ProjectCard
               title="SpotiGraph"
               description="Built a SQL-backed system for 1,000+ Spotify listening records. Optimized queries to reduce retrieval time by 30%, improving user satisfaction by 20%, and added instant timeframe toggles with instant UI updates."
               tech={["Python", "React", "Next.js", "SQL", "Flask"]}
-              imageSrc="/images/project-placeholder.svg"
+              imageSrc="/images/spotigraph_ss.jpeg"
               imageAlt="SpotiGraph screenshot"
             />
             <ProjectCard

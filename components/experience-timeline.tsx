@@ -15,7 +15,7 @@ const experiences: Job[] = [
     role: "Technical Consultant (via Ascend Consulting Group)",
     company: "Polymarket",
     meta: "March 2026 - Prsent · UCSB",
-    logoSrc: "/images/experience-logo-placeholder.svg",
+    logoSrc: "/images/polymarket_logo.png",
     logoAlt: "Polymarket",
     group: "work",
     bullets: [
@@ -27,7 +27,7 @@ const experiences: Job[] = [
     role: "Software Engineering Intern",
     company: "Yope (startup)",
     meta: "Dec 2025 — Mar 2026 · Remote",
-    logoSrc: "/images/experience-logo-placeholder.svg",
+    logoSrc: "/images/yope_logo.png",
     logoAlt: "Yope",
     group: "work",
     bullets: [
@@ -40,7 +40,7 @@ const experiences: Job[] = [
     role: "Software Engineering Intern",
     company: "smartQED (startup)",
     meta: "Jun 2025 — Sept 2025 · Remote",
-    logoSrc: "/images/experience-logo-placeholder.svg",
+    logoSrc: "/images/smart_qed.jpeg",
     logoAlt: "smartQED",
     group: "work",
     bullets: [
@@ -53,7 +53,7 @@ const experiences: Job[] = [
     role: "Technical Director",
     company: "ACM (UCSB)",
     meta: "Jan 2025 — Present · Santa Barbara, CA",
-    logoSrc: "/images/experience-logo-placeholder.svg",
+    logoSrc: "/images/acm_lgoo.png",
     logoAlt: "ACM UCSB",
     group: "leadership",
     bullets: [
@@ -66,7 +66,7 @@ const experiences: Job[] = [
     role: "Software Engineering Director",
     company: "AgentsSB (UCSB)",
     meta: "Sept 2025 — Present · Santa Barbara, CA",
-    logoSrc: "/images/experience-logo-placeholder.svg",
+    logoSrc: "/images/agentssb_logo.png",
     logoAlt: "AgentsSB",
     group: "leadership",
     bullets: [

@@ -23,6 +23,7 @@ export function ProjectCard({
           src={imageSrc}
           alt={imageAlt}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover opacity-95 transition group-hover:scale-[1.03]"
         />
       </div>

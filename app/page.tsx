@@ -84,7 +84,7 @@ export default function Home() {
                 Builder. Engineer. Problem Solver.
               </h1>
               <p className="max-w-2xl text-pretty text-lg leading-8 text-muted md:text-xl">
-                Hi! My name is Mitul and I'm a Student and an aspiring Software Engineer based in the Bay Area.
+                Hi! My name is Mitul and I'm a student and an aspiring Software Engineer based in the Bay Area.
               </p>
             </div>
 
@@ -178,6 +178,12 @@ export default function Home() {
                   Science (Grad: June 2027, GPA: 3.95/4.0).
                 </p>
                 <p>
+                  Grad: June 2027
+                </p>
+                <p>
+                  GPA: 3.95/4.0
+                </p>
+                <p>
                   Relevant coursework: Data Structures & Algorithms, Computer
                   Architecture, Operating Systems, Artificial Intelligence,
                   Cryptography, and more.
@@ -193,6 +199,10 @@ export default function Home() {
                   PokerBots with 250 participants, and directing teams through production
                   in a way that prioritizes learning and ownership. 
                 </p>
+                <p>
+                  I am passionate about learning new technologies and understanding complex algorithms, 
+                  and am currently spending my time immersed in machine learning, prompt engineering, and cloud engineering.
+                </p>
               </div>
             </div>
 
@@ -202,8 +212,8 @@ export default function Home() {
                 <div className="mt-5 grid grid-cols-2 gap-3">
                   {[
                     { value: "3.95", label: "GPA at UCSB" },
-                    { value: "4", label: "Engineering roles" },
-                    { value: "250+", label: "PokerBots participants" },
+                    { value: "5", label: "Engineering roles" },
+                    { value: "4", label: "Full-Stack Projects" },
                     { value: "2027", label: "Expected graduation" },
                   ].map((stat) => (
                     <div
@@ -260,14 +270,14 @@ export default function Home() {
               title="BangEditor"
               description="Engineered an image transformation web app using Cloudinary to support 15+ cloud-based transformations. Created 10+ reusable UI components in TypeScript and designed a MongoDB schema for 500+ transformations to enable near-instant retrieval and state reverts."
               tech={["JavaScript", "TypeScript", "Next.js", "Cloudinary", "MongoDB"]}
-              imageSrc="/images/project-placeholder.svg"
+              imageSrc="/images/bangeditor_ss.png"
               imageAlt="BangEditor screenshot"
             />
             <ProjectCard
               title="Nuzzy"
               description="Engineered a full-stack web app that recieves .nds/.gba ROMs, extracts game data with Python scripts, and visualizes Pokemon teams. Implemented an Agent to research and create a competitive strategy guide for the next battle in the game."
               tech={["Python", "JavaScript", "Typescript", "React", "Groq", "Anthropic"]}
-              imageSrc="/images/project-placeholder.svg"
+              imageSrc="/images/nuzzy_ss.png"
               imageAlt="Nuzzy screenshot"
             />
           </div>

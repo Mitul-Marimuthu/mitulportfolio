@@ -2,31 +2,45 @@
 
 import { useState } from "react";
 
+type Status = "idle" | "sending" | "sent" | "error";
+
 export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-    const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
-    window.open(`mailto:mitul6m16@gmail.com?subject=${subject}&body=${body}`);
-    setSent(true);
+    setStatus("sending");
+
+    const res = await fetch("https://formspree.io/f/mojybwan", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    if (res.ok) {
+      setStatus("sent");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } else {
+      setStatus("error");
+    }
   }
 
-  if (sent) {
+  if (status === "sent") {
     return (
       <div className="section-card flex min-h-[300px] items-center justify-center rounded-3xl p-7 md:p-8">
         <div className="text-center">
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/15">
             <span className="text-xl font-black text-gold">✓</span>
           </div>
-          <h3 className="text-lg font-black text-foreground">Your email client opened!</h3>
-          <p className="mt-2 text-sm text-muted">Send the email and I&apos;ll get back to you.</p>
+          <h3 className="text-lg font-black text-foreground">Message sent!</h3>
+          <p className="mt-2 text-sm text-muted">I&apos;ll get back to you soon.</p>
           <button
-            onClick={() => { setSent(false); setName(""); setEmail(""); setMessage(""); }}
+            onClick={() => setStatus("idle")}
             className="mt-4 rounded-full border border-foreground/15 px-4 py-2 text-sm font-semibold text-foreground/75 transition hover:border-foreground/25 hover:text-foreground"
           >
             Send another
@@ -73,11 +87,15 @@ export function ContactForm() {
           required
         />
       </label>
+      {status === "error" && (
+        <p className="text-xs text-red-500">Something went wrong — try emailing me directly at mitul6m16@gmail.com.</p>
+      )}
       <button
         type="submit"
-        className="w-full rounded-full bg-gold px-6 py-3 text-sm font-black text-on-gold shadow-[0_16px_40px_rgba(255,184,28,0.25)] transition hover:brightness-110"
+        disabled={status === "sending"}
+        className="w-full rounded-full bg-gold px-6 py-3 text-sm font-black text-on-gold shadow-[0_16px_40px_rgba(139,92,246,0.25)] transition hover:brightness-110 disabled:opacity-60"
       >
-        Send message
+        {status === "sending" ? "Sending…" : "Send message"}
       </button>
     </form>
   );

@@ -32,6 +32,7 @@ export function ProjectCard({
           alt={imageAlt}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          loading="eager"
           className="object-cover opacity-95 transition group-hover:scale-[1.03]"
         />
       </div>
@@ -57,6 +58,7 @@ export function ProjectCard({
                   alt={t}
                   fill
                   sizes="14px"
+                  unoptimized
                   className="object-contain p-[1px]"
                 />
               </span>

@@ -337,7 +337,7 @@ export default function Home() {
         <footer className="border-t border-foreground/10 pt-10">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-sm text-muted">
-              © 2026 Mitul Marimuthu · Built with Next.js + Tailwind
+              © 2026 Mitul Marimuthu
             </p>
             <div className="flex items-center gap-5">
               <a

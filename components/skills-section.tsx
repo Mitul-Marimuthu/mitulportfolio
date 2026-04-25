@@ -25,11 +25,11 @@ const skills = [
   { name: "MongoDB", category: "tools", logoSrc: "/images/logos/skills/mongodb.png" },
   { name: "Supabase", category: "tools", logoSrc: "/images/logos/skills/supabase.png" },
   { name: "Docker", category: "tools", logoSrc: "/images/logos/skills/docker.png" },
-  { name: "LangChain", category: "ai", logoSrc: "/images/logos/skills/python.png" },
-  { name: "LangGraph", category: "ai", logoSrc: "/images/logos/skills/python.png" },
+  { name: "LangChain", category: "ai", logoSrc: "/images/logos/skills/langchain.png" },
+  { name: "LangGraph", category: "ai", logoSrc: "/images/logos/skills/langgraph.png" },
   { name: "PyTorch", category: "ai", logoSrc: "/images/logos/skills/pytorch.png" },
   { name: "Hugging Face", category: "ai", logoSrc: "/images/logos/skills/huggingface.png" },
-  { name: "Scikit-learn", category: "ai", logoSrc: "/images/logos/skills/python.png" },
+  { name: "Scikit-learn", category: "ai", logoSrc: "/images/logos/skills/scikitlearn.png" },
 ];
 
 export function SkillsSection() {
@@ -71,6 +71,7 @@ export function SkillsSection() {
                 alt={skill.name}
                 fill
                 sizes="16px"
+                unoptimized
                 className="object-contain p-[2px]"
               />
             </span>

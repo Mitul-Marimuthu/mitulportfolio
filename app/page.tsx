@@ -267,11 +267,11 @@ export default function Home() {
               imageAlt="SpotiGraph screenshot"
             />
             <ProjectCard
-              title="BangEditor"
-              description="Engineered an image transformation web app using Cloudinary to support 15+ cloud-based transformations. Created 10+ reusable UI components in TypeScript and designed a MongoDB schema for 500+ transformations to enable near-instant retrieval and state reverts."
-              tech={["JavaScript", "TypeScript", "Next.js", "Cloudinary", "MongoDB"]}
-              imageSrc="/images/bangeditor_ss.png"
-              imageAlt="BangEditor screenshot"
+              title="Molecular Property Prediction Model"
+              description="Implemented a graph neural network from scratch to predict molecular toxicity, combining cheminformatics (RDKit) with modern deep learning on graph-structured data."
+              tech={["Python", "PyTorch", "Scikit-learn"]}
+              imageSrc="/images/GNNs.jpeg"
+              imageAlt="MPPM screenshot"
             />
             <ProjectCard
               title="Nuzzy"

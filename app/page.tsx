@@ -6,7 +6,7 @@ import { MobileNav } from "@/components/mobile-nav";
 import { ProjectCard } from "@/components/project-card";
 import { SkillsSection } from "@/components/skills-section";
 import { ThemeToggle } from "@/components/theme-toggle";
-
+// dummy comment
 const nav = [
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
@@ -41,7 +41,7 @@ export default function Home() {
               </span>
             </span>
           </a>
-
+ 
           <nav className="hidden items-center gap-1 md:flex">
             {nav.map((item) => (
               <a

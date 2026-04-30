@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 const pythonAliases = new Set(["flask", "scikit-learn", "langchain", "langgraph"]);
@@ -15,6 +17,7 @@ export function ProjectCard({
   imageSrc,
   imageAlt,
   href,
+  githubUrl,
 }: {
   title: string;
   description: string;
@@ -22,6 +25,7 @@ export function ProjectCard({
   imageSrc: string;
   imageAlt: string;
   href?: string;
+  githubUrl?: string;
 }) {
   const body = (
     <article className="section-card group overflow-hidden rounded-3xl transition hover:-translate-y-0.5 hover:shadow-[0_26px_70px_rgba(0,26,69,0.28)]">
@@ -35,6 +39,27 @@ export function ProjectCard({
           loading="eager"
           className="object-cover opacity-95 transition group-hover:scale-[1.03]"
         />
+        {githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="absolute left-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/50 backdrop-blur-sm transition hover:bg-black/70"
+            aria-label="View on GitHub"
+          >
+            <span className="relative h-4 w-4">
+              <Image
+                src="/images/logos/github.png"
+                alt="GitHub"
+                fill
+                sizes="16px"
+                unoptimized
+                className="object-contain"
+              />
+            </span>
+          </a>
+        )}
       </div>
       <div className="space-y-3 p-6">
         <div className="flex items-start justify-between gap-4">

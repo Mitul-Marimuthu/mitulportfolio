@@ -259,6 +259,7 @@ export default function Home() {
               tech={["Python", "Flask", "HTML", "CSS", "Gemini 2.0"]}
               imageSrc="/images/nflnews.JPEG"
               imageAlt="NFLNews screenshot"
+              githubUrl="https://github.com/Mitul-Marimuthu/NFLNews"
             />
             <ProjectCard
               title="SpotiGraph"
@@ -266,6 +267,7 @@ export default function Home() {
               tech={["Python", "React", "Next.js", "SQL", "Flask"]}
               imageSrc="/images/spotigraph_ss.jpeg"
               imageAlt="SpotiGraph screenshot"
+              githubUrl="https://github.com/Mitul-Marimuthu/SpotiGraph"
             />
             <ProjectCard
               title="Molecular Property Prediction Model"
@@ -273,6 +275,7 @@ export default function Home() {
               tech={["Python", "PyTorch", "Scikit-learn"]}
               imageSrc="/images/GNNs.jpeg"
               imageAlt="MPPM screenshot"
+              githubUrl="https://github.com/Mitul-Marimuthu/Molecular-Property-Prediction"
             />
             <ProjectCard
               title="Nuzzy"
@@ -280,6 +283,7 @@ export default function Home() {
               tech={["Python", "JavaScript", "Typescript", "React", "Groq", "Anthropic"]}
               imageSrc="/images/nuzzy_ss.png"
               imageAlt="Nuzzy screenshot"
+              githubUrl="https://github.com/Mitul-Marimuthu/Nuzzy"
             />
           </div>
         </section>

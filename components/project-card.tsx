@@ -50,12 +50,12 @@ export function ProjectCard({
           >
             <span className="relative h-4 w-4">
               <Image
-                src="/images/logos/github.png"
+                src="/images/logos/github.svg"
                 alt="GitHub"
                 fill
                 sizes="16px"
                 unoptimized
-                className="object-contain"
+                className="object-contain brightness-0 invert"
               />
             </span>
           </a>

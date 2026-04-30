@@ -7,6 +7,7 @@ import { ProjectCard } from "@/components/project-card";
 import { SkillsSection } from "@/components/skills-section";
 import { ThemeToggle } from "@/components/theme-toggle";
 // dummy comment
+// another dummy comment
 const nav = [
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },

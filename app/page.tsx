@@ -259,7 +259,7 @@ export default function Home() {
               tech={["Python", "Flask", "HTML", "CSS", "Gemini 2.0"]}
               imageSrc="/images/nflnews.JPEG"
               imageAlt="NFLNews screenshot"
-              githubUrl="https://github.com/Mitul-Marimuthu/NFLNews"
+              githubUrl="https://github.com/Mitul-Marimuthu/Niner-News-Frontend"
             />
             <ProjectCard
               title="SpotiGraph"
@@ -267,7 +267,7 @@ export default function Home() {
               tech={["Python", "React", "Next.js", "SQL", "Flask"]}
               imageSrc="/images/spotigraph_ss.jpeg"
               imageAlt="SpotiGraph screenshot"
-              githubUrl="https://github.com/Mitul-Marimuthu/SpotiGraph"
+              githubUrl="https://github.com/Mitul-Marimuthu/Spotify-FrontEnd"
             />
             <ProjectCard
               title="Molecular Property Prediction Model"
@@ -275,7 +275,7 @@ export default function Home() {
               tech={["Python", "PyTorch", "Scikit-learn"]}
               imageSrc="/images/GNNs.jpeg"
               imageAlt="MPPM screenshot"
-              githubUrl="https://github.com/Mitul-Marimuthu/Molecular-Property-Prediction"
+              githubUrl="https://github.com/Mitul-Marimuthu/deep-learning"
             />
             <ProjectCard
               title="Nuzzy"
@@ -283,7 +283,7 @@ export default function Home() {
               tech={["Python", "JavaScript", "Typescript", "React", "Groq", "Anthropic"]}
               imageSrc="/images/nuzzy_ss.png"
               imageAlt="Nuzzy screenshot"
-              githubUrl="https://github.com/Mitul-Marimuthu/Nuzzy"
+              githubUrl="https://github.com/Mitul-Marimuthu/nuzlocke-calculator"
             />
           </div>
         </section>

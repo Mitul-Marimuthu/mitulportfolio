@@ -12,7 +12,19 @@ type Job = {
 
 const experiences: Job[] = [
   {
-    role: "Technical Consultant (via Ascend Consulting Group)",
+    role: "Undergraduate Research Assistant",
+    company: "UCSB NLPGroup",
+    meta: "April 2026 - Present · UCSB",
+    logoSrc: "/images/nlpgroup.jpeg",
+    logoAlt: "NLP group",
+    group: "work",
+    bullets: [
+      "Engineered a scalable AI training platform, enabling 20+ researchers to train research agents with higher reliability.",
+      "Enhanced a multi-agent simulation environment, discovering leakage rates as high at 61.4% in state-of-the-art LLms.",
+    ]
+  },
+  {
+    role: "Technical Consultant (via Ascend)",
     company: "Polymarket",
     meta: "March 2026 - Prsent · UCSB",
     logoSrc: "/images/polymarket_logo.png",

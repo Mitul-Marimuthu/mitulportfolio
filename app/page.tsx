@@ -176,7 +176,7 @@ export default function Home() {
               <div className="space-y-4 text-sm leading-7 text-muted md:text-base">
                 <p>
                   University of California, Santa Barbara — B.S. in Computer
-                  Science (Grad: June 2027, GPA: 3.95/4.0).
+                  Science.
                 </p>
                 <p>
                   Grad: June 2027

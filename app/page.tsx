@@ -213,8 +213,8 @@ export default function Home() {
                 <div className="mt-5 grid grid-cols-2 gap-3">
                   {[
                     { value: "3.95", label: "GPA at UCSB" },
-                    { value: "5", label: "Engineering roles" },
-                    { value: "4", label: "Full-Stack Projects" },
+                    { value: "6", label: "Engineering roles" },
+                    { value: "4", label: "Noteworthy Projects" },
                     { value: "2027", label: "Expected graduation" },
                   ].map((stat) => (
                     <div
@@ -254,12 +254,12 @@ export default function Home() {
 
           <div className="grid gap-6 lg:grid-cols-2">
             <ProjectCard
-              title="NFLNews"
-              description="Built a news aggregator web app for NFL fans using Python, HTML, and Flask. Implemented a chatbot to act as a personalized team analyst, delivering real-time insights and updates."
-              tech={["Python", "Flask", "HTML", "CSS", "Gemini 2.0"]}
-              imageSrc="/images/nflnews.JPEG"
-              imageAlt="NFLNews screenshot"
-              githubUrl="https://github.com/Mitul-Marimuthu/Niner-News-Frontend"
+              title="MAGPIE Replication Report"
+              description="Ran high-stakes Agentic negotiation simulations and analyzed private information leakage results. Authored a comprehensive report. Inspired by the MAGPIE paper by Gurusha Juneja."
+              tech={["Python", "Next.js", "Vercel", "Mistral"]}
+              imageSrc="/images/magpie.png"
+              imageAlt="MAGPIE screenshot"
+              githubUrl="https://github.com/Mitul-Marimuthu/agent-security"
             />
             <ProjectCard
               title="SpotiGraph"

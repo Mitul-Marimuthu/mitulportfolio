@@ -25,6 +25,7 @@ const skills = [
   { name: "MongoDB", category: "tools", logoSrc: "/images/logos/skills/mongodb.png" },
   { name: "Supabase", category: "tools", logoSrc: "/images/logos/skills/supabase.png" },
   { name: "Docker", category: "tools", logoSrc: "/images/logos/skills/docker.png" },
+  { name: "Vercel", category: "tools", logoSrc: "images/logos/skills/vercel.png"},
   { name: "LangChain", category: "ai", logoSrc: "/images/logos/skills/langchain.png" },
   { name: "LangGraph", category: "ai", logoSrc: "/images/logos/skills/langgraph.png" },
   { name: "PyTorch", category: "ai", logoSrc: "/images/logos/skills/pytorch.png" },

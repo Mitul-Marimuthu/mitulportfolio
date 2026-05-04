@@ -262,12 +262,12 @@ export default function Home() {
               githubUrl="https://github.com/Mitul-Marimuthu/agent-security"
             />
             <ProjectCard
-              title="SpotiGraph"
-              description="Built a SQL-backed system for 1,000+ Spotify listening records. Optimized queries to reduce retrieval time by 30%, improving user satisfaction by 20%, and added instant timeframe toggles with instant UI updates."
-              tech={["Python", "React", "Next.js", "SQL", "Flask"]}
-              imageSrc="/images/spotigraph_ss.jpeg"
-              imageAlt="SpotiGraph screenshot"
-              githubUrl="https://github.com/Mitul-Marimuthu/Spotify-FrontEnd"
+              title="Not-So-Wordle"
+              description="Built an enhanced infinite Wordle clone with curated user stats an a leaderboard. Implemented a custom backend for game logic and data storage via MongoAB atlas. Pulled 13000+ playable words from the offical Wordle word list."
+              tech={["Next.js", "Typescript", "CSS", "React", "MongoDB", "Vercel"]}
+              imageSrc="/images/wordle.png"
+              imageAlt="Wordle screenshot"
+              githubUrl="https://github.com/Mitul-Marimuthu/not-so-wordle"
             />
             <ProjectCard
               title="Molecular Property Prediction Model"
@@ -292,7 +292,7 @@ export default function Home() {
         <section id="contact" className="scroll-mt-28 space-y-8">
           <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-start">
             <div className="space-y-4">
-              <p className="text-xs font-black uppercase tracking-[0.28em] text-gold">
+              <p className="text-2xl font-black uppercase tracking-[0.28em] text-gold">
                 Contact
               </p>
               <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">

@@ -18,6 +18,7 @@ const skills = [
   { name: "Python", category: "languages", logoSrc: "/images/logos/skills/python.png" },
   { name: "TypeScript", category: "languages", logoSrc: "/images/logos/skills/typescript.png" },
   { name: "JavaScript", category: "languages", logoSrc: "/images/logos/skills/javascript.png" },
+  { name: "CSS", category: "languages", logoSrc: "/images/logos/skills/css.png" },
   { name: "SQL", category: "languages", logoSrc: "/images/logos/skills/sql.png" },
   { name: "React", category: "frameworks", logoSrc: "/images/logos/skills/react.png" },
   { name: "Next.js", category: "frameworks", logoSrc: "/images/logos/skills/nextjs.png" },

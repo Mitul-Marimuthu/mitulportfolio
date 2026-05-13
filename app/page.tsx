@@ -4,6 +4,7 @@ import { ContactForm } from "@/components/contact-form";
 import { ExperienceTimeline } from "@/components/experience-timeline";
 import { MobileNav } from "@/components/mobile-nav";
 import { ProjectCard } from "@/components/project-card";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { SkillsSection } from "@/components/skills-section";
 import { ThemeToggle } from "@/components/theme-toggle";
 
@@ -153,6 +154,7 @@ export default function Home() {
         </section>
 
         {/* ── About ── */}
+        <ScrollReveal>
         <section id="about" className="scroll-mt-28 space-y-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="space-y-3">
@@ -232,8 +234,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </ScrollReveal>
 
         {/* ── Experience ── */}
+        <ScrollReveal delay={100}>
         <section id="experience" className="scroll-mt-28 space-y-8">
           <div className="space-y-3">
             <p className="text-2xl font-black uppercase tracking-[0.28em] text-gold">
@@ -243,8 +247,10 @@ export default function Home() {
 
           <ExperienceTimeline />
         </section>
+        </ScrollReveal>
 
         {/* ── Projects ── */}
+        <ScrollReveal delay={100}>
         <section id="projects" className="scroll-mt-28 space-y-8">
           <div className="space-y-3">
             <p className="text-2xl font-black uppercase tracking-[0.28em] text-gold">
@@ -287,8 +293,10 @@ export default function Home() {
             />
           </div>
         </section>
+        </ScrollReveal>
 
         {/* ── Contact ── */}
+        <ScrollReveal delay={100}>
         <section id="contact" className="scroll-mt-28 space-y-8">
           <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-start">
             <div className="space-y-4">
@@ -338,6 +346,7 @@ export default function Home() {
             <ContactForm />
           </div>
         </section>
+        </ScrollReveal>
 
         <footer className="border-t border-foreground/10 pt-10">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">

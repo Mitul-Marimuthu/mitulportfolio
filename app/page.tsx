@@ -261,7 +261,7 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-2">
             <ProjectCard
               title="MAGPIE Replication Report"
-              description="Ran high-stakes Agentic negotiation simulations and analyzed private information leakage results. Authored a comprehensive report. Inspired by the MAGPIE paper by Gurusha Juneja."
+              description="Ran high-stakes Agentic negotiation simulations and analyzed private information leakage per agent. Authored a comprehensive report. Inspired by the MAGPIE paper by Gurusha Juneja."
               tech={["Python", "Next.js", "Vercel", "Mistral"]}
               imageSrc="/images/magpie.png"
               imageAlt="MAGPIE screenshot"

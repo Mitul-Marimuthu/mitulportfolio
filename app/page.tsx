@@ -269,7 +269,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Not-So-Wordle"
-              description="Built an enhanced infinite Wordle clone with curated user stats an a leaderboard. Implemented a custom backend for game logic and data storage via MongoAB atlas. Pulled 13000+ playable words from the offical Wordle word list."
+              description="Built an enhanced infinite Wordle clone with curated user stats and a leaderboard. Implemented a custom backend for game logic and data storage via MongoAB atlas. Pulled 13000+ playable words from the offical Wordle word list."
               tech={["Next.js", "Typescript", "CSS", "React", "MongoDB", "Vercel"]}
               imageSrc="/images/wordle.png"
               imageAlt="Wordle screenshot"
